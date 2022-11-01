@@ -9,9 +9,14 @@
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
+    "lint": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
+  },
+  "lint-staged": {
+    "src/**/*.{tsx,ts,css}": "prettier --write",
+    "*.+(ts|tsx)": "yarn lint"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
@@ -30,6 +35,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.10",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
     "typescript": "*",
     "vite": "^3.2.0"
