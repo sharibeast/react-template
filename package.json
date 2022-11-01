@@ -4,9 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "pretty": "prettier --config .prettierrc.json  src/**/*.tsx --write",
-    "check-format": "prettier --check .",
-    "lint-check": "eslint .",
+    "validate": "yarn format:check && yarn lint:check",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
