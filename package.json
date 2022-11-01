@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "staged": "lint-staged",
     "validate": "yarn format:check && yarn lint:check",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
